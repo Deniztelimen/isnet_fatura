@@ -325,7 +325,7 @@ try:
 except pyodbc.OperationalError as op_error:
             st.session_state['username_2'] , st.session_state['password_2'] = login_page()
             st.error("Invalid username or password. Please check your username and password.")
-
+            st.write(f'{op_error}')
 except pyodbc.DatabaseError as db_error:
             st.session_state['username_2'] , st.session_state['password_2'] = login_page()
             st.error("Error connecting to the database. Please check the server and database details.")
