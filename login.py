@@ -133,7 +133,7 @@ try:
         username_db = st.session_state['username_2']
         password_db = st.session_state['password_2']
 
-        connection = pyodbc.connect(f'DRIVER={{ODBC Driver 17 for SQL Server}};SERVER={server};DATABASE={database};UID={username_db};PWD={password_db};timeout=30')
+        connection = pyodbc.connect(f'DRIVER={{ODBC Driver 17 for SQL Server}};SERVER={server};DATABASE={database};UID={username_db};PWD={password_db};timeout=90;')
 
         coli1, coli0, coli01, coli02, coli2, coli3 = st.columns([2,3,1,1,8,2])
 
