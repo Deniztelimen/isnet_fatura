@@ -10,7 +10,7 @@ warnings.filterwarnings('ignore')
 
 #server_name = '172.25.35.150'
 database_name = 'EFatura'
-server_name="90.159.26.14"
+server="90.159.26.14"
 
 st.set_page_config(layout="wide")
 
