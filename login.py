@@ -8,9 +8,9 @@ import warnings
 
 warnings.filterwarnings('ignore')
 
-#server_name = '172.25.35.150'
+server_name = '172.25.35.150'
 database_name = 'EFatura'
-server="90.159.26.14"
+vpn_id="90.159.26.14"
 
 st.set_page_config(layout="wide")
 
@@ -134,7 +134,7 @@ try:
         password_db = st.session_state['password_2']
 
     
-        connection = pyodbc.connect(f'DRIVER={{ODBC Driver 17 for SQL Server}};SERVER={server};DATABASE={database};UID={username_db};PWD={password_db};timeout=90;')
+        connection = pyodbc.connect(f'DRIVER={{ODBC Driver 17 for SQL Server}};SERVER={server};DATABASE={database};UID={username_db};PWD={password_db}VPN{vpn_id};timeout=90;')
         
 
         coli1, coli0, coli01, coli02, coli2, coli3 = st.columns([2,3,1,1,8,2])
